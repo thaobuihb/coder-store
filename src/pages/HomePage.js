@@ -20,7 +20,7 @@ function HomePage() {
     category: "All",
     priceRange: "",
     sortBy: "featured",
-    searchQuery: ""
+    searchQuery: "",
   };
   const methods = useForm({
     defaultValues,
@@ -49,7 +49,7 @@ function HomePage() {
     <Container sx={{ display: "flex", minHeight: "100vh", mt: 3 }}>
       <Stack>
         <FormProvider methods={methods}>
-          <ProductFilter resetFilter={reset} />
+        <ProductFilter resetFilter={() => reset} />        
         </FormProvider>
       </Stack>
       <Stack sx={{ flexGrow: 1 }}>
